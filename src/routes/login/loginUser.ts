@@ -1,8 +1,8 @@
 import { Request, Response } from "express";
-import { User } from "../../Models/User";
 import { HTTP } from "../../utils/http";
+import { User } from "../../Models/User";
 
-export async function createUser(req: Request, res: Response) {
+export async function LoginUser(req: Request, res: Response) {
   try {
     const { name, email } = req.body;
 
@@ -12,9 +12,9 @@ export async function createUser(req: Request, res: Response) {
 
     const userByEmail = await User.find({ email });
 
-    if (userByEmail) {
-      return res.status(HTTP.FORBIDDEN.CODE).json({
-        error: `${email} already exists.`,
+    if (userByEmail.length) {
+      return res.status(HTTP.OK.CODE).json({
+        userId: userByEmail[0]._id,
       });
     }
 
@@ -25,6 +25,6 @@ export async function createUser(req: Request, res: Response) {
 
     return res.status(HTTP.CREATED.CODE).json(user);
   } catch (e) {
-    console.log(e);
+    console.error(e);
   }
 }

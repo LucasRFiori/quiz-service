@@ -10,6 +10,7 @@ export const User = model(
     email: {
       type: String,
       required: true,
+      unique: true,
     },
     score: {
       type: Number,

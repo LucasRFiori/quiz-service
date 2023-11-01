@@ -8,17 +8,28 @@ import { listQuestions } from "./routes/questions/listQuestions";
 import { getRandomQuestions } from "./routes/questions/getRandomQuestions";
 import { createQuestions } from "./routes/questions/createQuestions";
 import { validate } from "./routes/answers/validate";
+import { updateUserScore } from "./routes/score/updateUserScore";
+import { LoginUser } from "./routes/login/loginUser";
 
 export const router = Router();
 
+// User
 router.get("/users", listUsers);
 router.get("/users/:userId", getUser);
 router.post("/users", createUser);
 router.patch("/users/:userId", updateUser);
 
+//Question
 router.get("/questions/list", listQuestions);
 router.get("/questions", getRandomQuestions);
 router.post("/questions", createQuestion);
 router.post("/createListOfQuestions", createQuestions);
 
+// Validate answer
 router.post("/answers/validate/:questionId", validate);
+
+// Score
+router.post("/score/:userId", updateUserScore);
+
+//Login
+router.post("/login", LoginUser);
