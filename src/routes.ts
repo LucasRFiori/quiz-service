@@ -12,6 +12,7 @@ import { updateUserScore } from "./routes/score/updateUserScore";
 import { LoginUser } from "./routes/login/loginUser";
 import { deleteUser } from "./routes/users/deleteUser";
 import { deleteQuestion } from "./routes/questions/deleteQuestion";
+import { getRanking } from "./routes/ranking/getRanking";
 
 export const router = Router();
 
@@ -37,3 +38,6 @@ router.post("/score/:userId", updateUserScore);
 
 //Login
 router.post("/login", LoginUser);
+
+//Ranking
+router.get("/ranking", getRanking);
