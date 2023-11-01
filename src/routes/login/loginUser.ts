@@ -14,7 +14,7 @@ export async function LoginUser(req: Request, res: Response) {
 
     if (userByEmail.length) {
       return res.status(HTTP.OK.CODE).json({
-        userId: userByEmail[0]._id,
+        _id: userByEmail[0]._id,
       });
     }
 
