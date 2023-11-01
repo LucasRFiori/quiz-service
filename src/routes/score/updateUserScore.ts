@@ -1,6 +1,7 @@
 import { Request, Response } from "express";
 import { HTTP } from "../../utils/http";
 import { User } from "../../Models/User";
+import { convertToMinutesAndSeconds } from "../../utils/convertToTimeAndSeconds";
 
 interface UpdateUserScoreBody {
   score?: number;
@@ -38,6 +39,7 @@ export async function updateUserScore(
     {
       score,
       quizTime: time,
+      formattedTime: convertToMinutesAndSeconds(time ?? 0),
     },
     { new: true }
   );

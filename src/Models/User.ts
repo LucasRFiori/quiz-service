@@ -18,5 +18,8 @@ export const User = model(
     quizTime: {
       type: Number,
     },
+    formattedTime: {
+      type: String,
+    },
   })
 );

@@ -6,4 +6,5 @@ export const config = {
   NODE_PORT,
   NODE_URL: `http://${MAIN_URL}:${NODE_PORT}`,
   MONGO_URL: `mongodb://${MAIN_URL}:${MONGO_PORT}/quiz`,
+  QUIZ_TOTAL_TIME: 300,
 };
