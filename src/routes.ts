@@ -5,7 +5,7 @@ import { listUsers } from "./routes/users/listUsers";
 import { getUser } from "./routes/users/getUser";
 import { createQuestion } from "./routes/questions/createQuestion";
 import { listQuestions } from "./routes/questions/listQuestions";
-import { getRandomQuestion } from "./routes/questions/getRandomQuestions";
+import { getRandomQuestions } from "./routes/questions/getRandomQuestions";
 import { createQuestions } from "./routes/questions/createQuestions";
 import { validate } from "./routes/answers/validate";
 
@@ -16,8 +16,8 @@ router.get("/users/:userId", getUser);
 router.post("/users", createUser);
 router.patch("/users/:userId", updateUser);
 
-router.get("/questions", listQuestions);
-router.get("/question", getRandomQuestion);
+router.get("/questions/list", listQuestions);
+router.get("/questions", getRandomQuestions);
 router.post("/questions", createQuestion);
 router.post("/createListOfQuestions", createQuestions);
 
