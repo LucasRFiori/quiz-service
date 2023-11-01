@@ -4,8 +4,9 @@ import { Question } from "../../Models/Question";
 
 export async function getRandomQuestion(req: Request, res: Response) {
   try {
-    const questions = await Question.aggregate([{ $sample: { size: 10 } }]);
-
+    const questions = await Question.find()
+      .limit(10)
+      .select("-__v -rightAnswer");
     res.status(HTTP.OK.CODE).json(questions);
   } catch (e) {
     console.log(e);
