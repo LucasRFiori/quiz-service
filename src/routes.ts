@@ -7,6 +7,7 @@ import { createQuestion } from "./routes/questions/createQuestion";
 import { listQuestions } from "./routes/questions/listQuestions";
 import { getRandomQuestion } from "./routes/questions/getRandomQuestions";
 import { createQuestions } from "./routes/questions/createQuestions";
+import { validate } from "./routes/answers/validate";
 
 export const router = Router();
 
@@ -19,3 +20,5 @@ router.get("/questions", listQuestions);
 router.get("/question", getRandomQuestion);
 router.post("/questions", createQuestion);
 router.post("/createListOfQuestions", createQuestions);
+
+router.post("/answers/validate/:questionId", validate);
