@@ -5,19 +5,19 @@ import { CreateQuestionBody } from "../../typings/question.type";
 
 export async function createQuestion(req: Request, res: Response) {
   try {
-    const { title, answers, rightAnswer } = req.body as CreateQuestionBody;
+    const { video_url, answers, rightAnswer } = req.body as CreateQuestionBody;
 
-    if (!title || !answers || !rightAnswer) {
+    if (!video_url || !answers || !rightAnswer) {
       return res.status(HTTP.BAD_REQUEST.CODE).json(HTTP.BAD_REQUEST.MESSAGE);
     }
 
-    const user = await Question.create({
-      title,
+    const question = await Question.create({
+      video_url,
       answers,
       rightAnswer,
     });
 
-    return res.status(HTTP.OK.CODE).json(user);
+    return res.status(HTTP.OK.CODE).json(question);
   } catch (e) {
     console.log(e);
   }

@@ -14,14 +14,14 @@ export async function createQuestions(req: Request, res: Response) {
     const createdQuestions = [];
 
     for (const questionInfo of questionsData) {
-      const { title, answers, rightAnswer } = questionInfo;
+      const { video_url, answers, rightAnswer } = questionInfo;
 
-      if (!title || !answers || !rightAnswer) {
+      if (!video_url || !answers || !rightAnswer) {
         return res.status(HTTP.BAD_REQUEST.CODE).json(HTTP.BAD_REQUEST.MESSAGE);
       }
 
       const createdQuestion = await Question.create({
-        title,
+        video_url,
         answers,
         rightAnswer,
       });

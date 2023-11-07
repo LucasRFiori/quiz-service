@@ -3,7 +3,7 @@ import { Schema, model } from "mongoose";
 export const Question = model(
   "Question",
   new Schema({
-    title: {
+    video_url: {
       type: String,
       required: true,
     },

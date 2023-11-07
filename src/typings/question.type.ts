@@ -1,5 +1,5 @@
 export interface CreateQuestionBody {
-  title: String;
+  video_url: String;
   answers: {
     a: String;
     b: String;
