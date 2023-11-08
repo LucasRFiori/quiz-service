@@ -1,0 +1,242 @@
+[
+  {
+    "video_url": "https://www.youtube.com/watch?v=UQn_bOA4XU4",
+    "answers": {
+      "a": "Como você está?",
+      "b": "Você está se sentindo melhor hoje?",
+      "c": "Tudo bem com você?",
+      "d": "Você está se sentindo bem?"
+    },
+    "rightAnswer": "a",
+    "_id": "654ad773592ec6315a8b4e5f",
+    "__v": 0
+  },
+  {
+    "video_url": "https://www.youtube.com/watch?v=oc6k5Oic6lQ",
+    "answers": {
+      "a": "Aqui perto do banheiro?",
+      "b": "O banheiro está longe daqui?",
+      "c": "Onde fica o banheiro?",
+      "d": "Você pode me indicar o caminho para o banheiro?"
+    },
+    "rightAnswer": "c",
+    "_id": "654ad773592ec6315a8b4e61",
+    "__v": 0
+  },
+  {
+    "video_url": "https://www.youtube.com/watch?v=EvD-BEw0MVw",
+    "answers": {
+      "a": "Estou com muita fome.",
+      "b": "Você quer comer alguma coisa?",
+      "c": "Eu estou com fome.",
+      "d": "Você pode me ajudar a encontrar algo para comer?"
+    },
+    "rightAnswer": "c",
+    "_id": "654ad773592ec6315a8b4e63",
+    "__v": 0
+  },
+  {
+    "video_url": "https://www.youtube.com/watch?v=6g5Wegq7FM4",
+    "answers": {
+      "a": "Será que você pode me dar uma orientação?",
+      "b": "Poderia me ajudar, por favor?",
+      "c": "Você tem um minuto para me ajudar?",
+      "d": "Você poderia me dar uma mãozinha?"
+    },
+    "rightAnswer": "b",
+    "_id": "654ad773592ec6315a8b4e65",
+    "__v": 0
+  },
+  {
+    "video_url": "https://www.youtube.com/watch?v=rSEiqGWBRek",
+    "answers": {
+      "a": "Você pode dar mais detalhes?",
+      "b": "Onde posso encontrar mais informações?",
+      "c": "Poderia me ajudar a aprender isso?",
+      "d": "Eu preciso de mais informações."
+    },
+    "rightAnswer": "d",
+    "_id": "654ad773592ec6315a8b4e67",
+    "__v": 0
+  },
+  {
+    "video_url": "https://www.youtube.com/watch?v=Xy23lE9QgSk",
+    "answers": {
+      "a": "Você poderia me recomendar algum material de estudo de Libras?",
+      "b": "Existe algum curso de Libras disponível?",
+      "c": "Eu gostaria de aprender mais sobre Libras.",
+      "d": "Como posso melhorar meu conhecimento em Libras?"
+    },
+    "rightAnswer": "c",
+    "_id": "654ad773592ec6315a8b4e69",
+    "__v": 0
+  },
+  {
+    "video_url": "https://www.youtube.com/watch?v=KZ2MPr-4bDg",
+    "answers": {
+      "a": "Estou curioso para saber seu nome.",
+      "b": "Qual é o seu nome?",
+      "c": "Poderia me dizer seu nome, por favor? ",
+      "d": "Como devo te chamar?"
+    },
+    "rightAnswer": "b",
+    "_id": "654ad773592ec6315a8b4e6b",
+    "__v": 0
+  },
+  {
+    "video_url": "https://www.youtube.com/watch?v=foNchj_1e08",
+    "answers": {
+      "a": "O que te mantém ocupado?",
+      "b": "Posso te ajudar com algo que está fazendo?",
+      "c": "Você está ocupado agora?",
+      "d": "O que você está fazendo?"
+    },
+    "rightAnswer": "d",
+    "_id": "654ad773592ec6315a8b4e6d",
+    "__v": 0
+  },
+  {
+    "video_url": "https://www.youtube.com/watch?v=AVIvzyCgCLM",
+    "answers": {
+      "a": "Por que você está tão feliz?",
+      "b": "O que te deixa tão feliz hoje?",
+      "c": "Estou muito feliz.",
+      "d": "Algo de bom aconteceu?"
+    },
+    "rightAnswer": "c",
+    "_id": "654ad773592ec6315a8b4e6f",
+    "__v": 0
+  },
+  {
+    "video_url": "https://www.youtube.com/watch?v=fTcqRCGVsCo",
+    "answers": {
+      "a": "Poderia explicar de outra maneira?",
+      "b": "Você poderia falar mais devagar, por favor?",
+      "c": "Você pode repetir, por favor?",
+      "d": "Desculpe, eu não entendi."
+    },
+    "rightAnswer": "d",
+    "_id": "654ad773592ec6315a8b4e71",
+    "__v": 0
+  },
+  {
+    "video_url": "https://www.youtube.com/watch?v=4euAINJig_w",
+    "answers": {
+      "a": "Você sabe onde posso encontrar um táxi?",
+      "b": "O táxi leva muito tempo para chegar lá?",
+      "c": "Onde posso pegar um táxi? ",
+      "d": "Como posso chamar um táxi?"
+    },
+    "rightAnswer": "c",
+    "_id": "654ad9c3592ec6315a8b4e73",
+    "__v": 0
+  },
+  {
+    "video_url": "https://www.youtube.com/watch?v=dfZP1qb1Yps",
+    "answers": {
+      "a": "Poderia me emprestar um lápis, por favor? ",
+      "b": "Posso pegar emprestado seu lápis por um momento?",
+      "c": "Você tem um lápis extra?",
+      "d": "Você poderia me ajudar com um lápis?"
+    },
+    "rightAnswer": "a",
+    "_id": "654ad9c3592ec6315a8b4e75",
+    "__v": 0
+  },
+  {
+    "video_url": "https://www.youtube.com/watch?v=ovd4N-mNQQk",
+    "answers": {
+      "a": "Eu não entendo o que você está dizendo.",
+      "b": "Poderia escrever isso para mim?",
+      "c": "Você pode explicar de forma diferente?",
+      "d": "Você pode falar mais devagar, por favor?"
+    },
+    "rightAnswer": "a",
+    "_id": "654ad9c3592ec6315a8b4e77",
+    "__v": 0
+  },
+  {
+    "video_url": "https://www.youtube.com/watch?v=59oZ2HP_rVA",
+    "answers": {
+      "a": "Você está disponível para almoçar amanhã?",
+      "b": "Vamos almoçar juntos amanhã?",
+      "c": "Você gostaria de almoçar comigo amanhã?",
+      "d": "Que tal irmos ao cinema hoje à noite?"
+    },
+    "rightAnswer": "b",
+    "_id": "654ad9c3592ec6315a8b4e79",
+    "__v": 0
+  },
+  {
+    "video_url": "https://www.youtube.com/watch?v=Qt_7NXOO0uE",
+    "answers": {
+      "a": "Poderia me ajudar a aprender isso?",
+      "b": "Você pode me ensinar a fazer isso?",
+      "c": "Como posso fazer o mesmo que você?",
+      "d": "Você pode me mostrar como fazer isso?"
+    },
+    "rightAnswer": "d",
+    "_id": "654ad9c3592ec6315a8b4e7b",
+    "__v": 0
+  },
+  {
+    "video_url": "https://www.youtube.com/watch?v=mudy823XzKY",
+    "answers": {
+      "a": "Tem algum prato que você adora?",
+      "b": "Qual é a sua comida preferida?",
+      "c": "Qual é o seu prato favorito?",
+      "d": "O que você gosta de comer? "
+    },
+    "rightAnswer": "c",
+    "_id": "654ad9c3592ec6315a8b4e7d",
+    "__v": 0
+  },
+  {
+    "video_url": "https://www.youtube.com/watch?v=mylyAzZ_c2s",
+    "answers": {
+      "a": "Que tal sairmos para almoçar amanhã?",
+      "b": "Há algum filme que você queira ver hoje à noite?",
+      "c": "Você está livre para assistir a um filme hoje à noite?",
+      "d": "Podemos assistir a um filme juntos hoje à noite?"
+    },
+    "rightAnswer": "d",
+    "_id": "654ad9c3592ec6315a8b4e7f",
+    "__v": 0
+  },
+  {
+    "video_url": "https://www.youtube.com/watch?v=FKsB2GtmwYg",
+    "answers": {
+      "a": "O ônibus leva muito tempo para chegar lá?",
+      "b": "Quanto tempo leva para chegar lá de ônibus?",
+      "c": "O tempo de viagem de ônibus é longo?",
+      "d": "Qual é o tempo estimado de viagem de ônibus?"
+    },
+    "rightAnswer": "b",
+    "_id": "654ad9c3592ec6315a8b4e81",
+    "__v": 0
+  },
+  {
+    "video_url": "https://www.youtube.com/watch?v=0-2Cq-fGWMw",
+    "answers": {
+      "a": "O que você acha que devemos preparar para o jantar?",
+      "b": "Você quer me ajudar a escolher mantimentos para o jantar?",
+      "c": "Que ingredientes você acha que devemos comprar para o jantar?",
+      "d": "Preciso comprar mantimentos para o jantar."
+    },
+    "rightAnswer": "d",
+    "_id": "654ad9c3592ec6315a8b4e83",
+    "__v": 0
+  },
+  {
+    "video_url": "https://www.youtube.com/watch?v=yG6S1BtqQOk",
+    "answers": {
+      "a": "Espero que sua reunião de amanhã de manhã corra bem.",
+      "b": "Boa sorte com a sua reunião amanhã de manhã.",
+      "c": "Eu tenho uma reunião importante amanhã cedo.",
+      "d": "Você já se preparou para a reunião de amanhã cedo? "
+    },
+    "rightAnswer": "c",
+    "_id": "654ad9c3592ec6315a8b4e85",
+    "__v": 0
+  }
+]

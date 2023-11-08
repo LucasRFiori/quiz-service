@@ -13,6 +13,7 @@ import { LoginUser } from "./routes/login/loginUser";
 import { deleteUser } from "./routes/users/deleteUser";
 import { deleteQuestion } from "./routes/questions/deleteQuestion";
 import { getRanking } from "./routes/ranking/getRanking";
+import { deleteAllQuestions } from "./routes/questions/deleteAllQuestions";
 
 export const router = Router();
 
@@ -27,7 +28,8 @@ router.delete("/users/:userId", deleteUser);
 router.get("/questions/list", listQuestions);
 router.get("/questions", getRandomQuestions);
 router.post("/questions", createQuestion);
-router.post("/createListOfQuestions", createQuestions);
+router.post("/questions/createListOfQuestions", createQuestions);
+router.delete("/questions/deleteAllQuestions", deleteAllQuestions);
 router.delete("/questions/:questionId", deleteQuestion);
 
 // Validate answer
