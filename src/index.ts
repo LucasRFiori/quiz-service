@@ -1,5 +1,5 @@
 import express from "express";
-import { config } from "../api.config";
+import { config } from "./api.config";
 import { router } from "./routes";
 import "express-async-errors";
 import mongoose from "mongoose";

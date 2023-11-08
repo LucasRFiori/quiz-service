@@ -1,0 +1,13 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.config = void 0;
+require("dotenv/config");
+const NODE_PORT = 3000;
+const MONGO_PORT = 27017;
+const MAIN_URL = "localhost";
+exports.config = {
+    NODE_PORT,
+    NODE_URL: `http://${MAIN_URL}:${NODE_PORT}`,
+    MONGO_URL: process.env.MONGO_URL || `mongodb://${MAIN_URL}:${MONGO_PORT}/quiz`,
+    QUIZ_TOTAL_TIME: 600,
+};

@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon --watch 'src/' --exec 'ts-node src/index.ts' -e ts",
-    "start:windows": "ts-node src/index.ts"
+    "start:windows": "ts-node src/index.ts",
+    "build": "tsc"
   },
   "keywords": [],
   "author": "",
