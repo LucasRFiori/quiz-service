@@ -1,29 +1,46 @@
 import { Request, Response } from "express";
 import { HTTP } from "../../utils/http";
 import { User } from "../../Models/User";
+import Bcrypt from "bcryptjs";
+import jwt from "jsonwebtoken";
+import "dotenv";
+import { config } from "../../api.config";
 
 export async function LoginUser(req: Request, res: Response) {
   try {
-    const { name, email } = req.body;
+    const { email, password } = req.body;
 
-    if (!name || !email) {
+    if (!email || !password) {
       return res.status(HTTP.BAD_REQUEST.CODE).json(HTTP.BAD_REQUEST.MESSAGE);
     }
 
-    const userByEmail = await User.find({ email });
+    const user = await User.findOne({ email });
 
-    if (userByEmail.length) {
-      return res.status(HTTP.OK.CODE).json({
-        _id: userByEmail[0]._id,
-      });
+    if (!user) {
+      return res
+        .status(401)
+        .json({ message: "Nome de usuário ou senha inválidos." });
     }
 
-    const user = await User.create({
-      name,
-      email,
+    const passwordMatch = await Bcrypt.compare(password, user.password);
+
+    if (!passwordMatch) {
+      return res
+        .status(401)
+        .json({ message: "Nome de usuário ou senha inválidos." });
+    }
+
+    const token = jwt.sign({ id: user._id }, config.JWT_SECRET, {
+      expiresIn: "15m",
     });
 
-    return res.status(HTTP.CREATED.CODE).json(user);
+    res.cookie("authToken", token, {
+      httpOnly: true,
+      sameSite: "none",
+      secure: true,
+    });
+
+    res.json({ message: "Logged in." });
   } catch (e) {
     console.error(e);
   }

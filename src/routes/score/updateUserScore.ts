@@ -2,25 +2,14 @@ import { Request, Response } from "express";
 import { HTTP } from "../../utils/http";
 import { User } from "../../Models/User";
 import { convertToMinutesAndSeconds } from "../../utils/convertToTimeAndSeconds";
+import CustomRequest from "../../typings/express";
 
-interface UpdateUserScoreBody {
-  score?: number;
-  time?: number;
-}
-
-interface UpdateUserParams {
-  userId?: string;
-}
-
-export async function updateUserScore(
-  req: Request<UpdateUserParams, any, UpdateUserScoreBody>,
-  res: Response
-) {
-  const { userId } = req.params;
+export async function updateUserScore(req: CustomRequest, res: Response) {
+  const userId = req.userId;
 
   if (!userId) {
     return res.status(HTTP.BAD_REQUEST.CODE).json({
-      error: "Missing userId.",
+      error: "Missing userId -> Token.",
     });
   }
 
@@ -42,7 +31,7 @@ export async function updateUserScore(
       formattedTime: convertToMinutesAndSeconds(time ?? 0),
     },
     { new: true }
-  );
+  ).select("-password -__v");
 
   if (!updatedUser) {
     return res.status(HTTP.NOT_FOUND.CODE).json({
@@ -50,6 +39,5 @@ export async function updateUserScore(
     });
   }
 
-  // Return a single response
   return res.status(HTTP.CREATED.CODE).json(updatedUser);
 }
