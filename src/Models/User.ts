@@ -12,6 +12,10 @@ export const User = model(
       required: true,
       unique: true,
     },
+    password: {
+      type: String,
+      required: true,
+    },
     score: {
       type: Number,
     },

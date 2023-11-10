@@ -1,23 +1,39 @@
 import express from "express";
 import { config } from "./api.config";
 import { router } from "./routes";
-import "express-async-errors";
 import mongoose from "mongoose";
+import cookieParser from "cookie-parser";
+import cors from "cors";
+import "express-async-errors";
 
 const app = express();
+
+// Lista de origens permitidas
+
+const corsOptions = {
+  origin: (
+    origin: string | undefined,
+    callback: (error: Error | null, allow: boolean) => void
+  ) => {
+    if (!origin || config.ALLOW_ORIGIN.indexOf(origin) !== -1) {
+      callback(null, true);
+    } else {
+      callback(new Error("Origem não permitida pelo CORS"), false);
+    }
+  },
+  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+  credentials: true,
+  optionsSuccessStatus: 204,
+};
 
 mongoose
   .connect(config.MONGO_URL)
   .then(() => {
     console.log("✅ Connected to MongoDB");
 
-    app.use((req, res, next) => {
-      res.setHeader("Access-Control-Allow-Origin", "*");
-      res.setHeader("Access-Control-Allow-Methods", "*");
-      res.setHeader("Access-Control-Allow-Headers", "*");
+    app.use(cors(corsOptions));
 
-      next();
-    });
+    app.use(cookieParser());
 
     app.use(express.json());
 
