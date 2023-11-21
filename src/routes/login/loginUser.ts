@@ -6,7 +6,7 @@ import jwt from "jsonwebtoken";
 import "dotenv";
 import { config } from "../../api.config";
 
-export async function LoginUser(req: Request, res: Response) {
+export async function loginUser(req: Request, res: Response) {
   try {
     const { email, password } = req.body;
 
@@ -31,7 +31,7 @@ export async function LoginUser(req: Request, res: Response) {
     }
 
     const token = jwt.sign({ id: user._id }, config.JWT_SECRET, {
-      expiresIn: "15m",
+      expiresIn: "24h",
     });
 
     res.cookie("authToken", token, {
