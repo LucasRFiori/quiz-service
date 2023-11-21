@@ -16,4 +16,5 @@ export const config = {
     "https://quiz-libras.vercel.app",
     `http://${MAIN_URL}:5137`,
   ],
+  ADMIN_SECRET: process.env.ADMIN_SECRET || "-0-0",
 };
